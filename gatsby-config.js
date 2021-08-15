@@ -5,6 +5,9 @@ module.exports = {
     author: `Felipe Munhoz`,
     siteUrl: `https://notes.munhoz.dev`,
   },
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
