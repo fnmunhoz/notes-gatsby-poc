@@ -20,17 +20,27 @@ git clone git@github.com:fnmunhoz/notes.git
 ```
 
 
-## Starting
+## Development mode
 
-To start the app, make sure you are inside the repository root folder.
+To start the app in development mode, go to the repository root folder, and run:
 
 ```sh
 docker-compose run --rm app npm install
 docker-compose up
 ```
 
-After that you should be able to open the app on the browser at the following address: http://localhost:8000
+Then, open the app on the browser at the following address: http://localhost:8000
 
+## Production mode
+
+To start the app in production mode, go to the repository root folder, and run:
+
+```sh
+docker-compose run --rm app npm install
+docker-compose run --service-ports prod
+```
+
+Then, open the app on the browser at the following address: http://localhost:9000
 
 ----
 

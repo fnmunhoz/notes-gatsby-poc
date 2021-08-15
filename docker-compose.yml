@@ -12,5 +12,26 @@ services:
     ports:
       - "8000:8000"
 
+  prod:
+    profiles: ["prod"]
+    build:
+      dockerfile: ./Dockerfile.dev
+      context: .
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        rm -rf .cache/*
+        ls -l .cache
+        npm run build
+        npm run serve -- -H 0.0.0.0
+    working_dir: /opt/app
+    volumes:
+      - .:/opt/app
+      - node_modules:/opt/app/node_modules
+      - prod_cache:/opt/app/.cache
+    ports:
+      - "9000:9000"
+
 volumes:
   node_modules:
+  prod_cache:
