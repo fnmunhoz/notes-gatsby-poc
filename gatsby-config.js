@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Notes`,
+    title: `notes.munhoz.dev`,
     description: `Felipe Munhoz's developer notes`,
     author: `Felipe Munhoz`,
     siteUrl: `https://notes.munhoz.dev`,
@@ -23,8 +23,8 @@ module.exports = {
         name: `Notes`,
         short_name: `Notes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2b303b`,
+        theme_color: `#2b303b`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`,
       },
